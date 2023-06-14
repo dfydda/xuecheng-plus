@@ -8,6 +8,7 @@
     <name>xuecheng-plus-parent</name>
     <description>xuecheng-plus-parent</description>
     <packaging>pom</packaging>
+
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -31,6 +32,7 @@
         <swagger-spring-boot-starter.version>1.9.0.RELEASE</swagger-spring-boot-starter.version>
         <elasticsearch.version>7.12.1</elasticsearch.version>
     </properties>
+
 
     <dependencyManagement>
         <dependencies>
@@ -184,6 +186,7 @@
         </dependencies>
 
     </dependencyManagement>
+
 
     <build>
         <finalName>${project.name}</finalName>
