@@ -26,7 +26,7 @@
     <sql id="Base_Column_List">
         id, pname, parentid, grade, media_type, start_time, end_time, description, timelength, orderby, course_id, course_pub_id, status, is_preview, create_date, change_date
     </sql>
-    <!-- 将treeNodeResultMap映射到TeachplanDto的属性-->
+
     <resultMap id="treeNodeResultMap" type="com.xuecheng.content.model.dto.TeachplanDto">
 
         <id     column="one_id"        property="id" />
@@ -90,7 +90,7 @@
             m1.id             teachplanMeidaId,
             m1.media_id       mediaId
         from teachplan one
-                 inner join teachplan two on two.parentid = one.id
+                 left join teachplan two on two.parentid = one.id
                  left join teachplan_media m1 on two.id = m1.teachplan_id
         where one.parentid = 0
           and one.course_id = #{id}
